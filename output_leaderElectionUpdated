@@ -1,0 +1,84 @@
+# Hyunjoon Jeon (hj1119)
+
+mix compile
+-------------------------------------------------------------------
+
+06:55:07.531 [warning] ** Can not start Client::start,[%{append_entries_timeout: 10, client_reply_timeout: 500, client_request_interval: 5, client_timelimit: 60000, crash_servers: %{3 => 10000, 4 => 15000}, debug_level: 0, debug_options: "none", election_timeout_range: 300..600, line_num: 0, max_amount: 1000, max_client_requests: 1, monitorP: #PID<0.144.0>, monitor_interval: 500, n_accounts: 100, n_clients: 0, n_servers: 3, node_location: "raft_56_hyunjoonjeon@127.0.0.1 (192.168.1.56)", node_name: "Raft", node_num: "", node_suffix: "56_hyunjoonjeon@127.0.0.1", node_type: "Raft", raft_timelimit: 5000, setup: :default, start_function: :cluster_start}, 0, [#PID<18201.146.0>, #PID<18308.147.0>, #PID<18309.146.0>]] on :"client0_56_hyunjoonjeon@127.0.0.1" **
+
+Server3: election started
+Server3: current_term: 1
+Server3: current_role: :CANDIDATE
+Server3: number of votes: 1
+Server3: sending vote request with msg: [#PID<0.146.0>, 3, 0, 0, 1] to #PID<18274.146.0>
+Server3: sending vote request with msg: [#PID<0.146.0>, 3, 0, 0, 1] to #PID<18275.147.0>
+Server1: vote request received from Server3
+Server2: vote request received from Server3
+Server1: Requested server has higher term value so increment
+Server2: Requested server has higher term value so increment
+Server1: this server's log last term: 0
+Server2: this server's log last term: 0
+Server1: requested server's log last term: 0
+Server2: requested server's log last term: 0
+Server2: this server's log last index: 0
+Server1: this server's log last index: 0
+Server2: requested server's log last index: 0
+Server1: requested server's log last index: 0
+Server2: voting for Server3
+Server1: voting for Server3
+Server3: vote reply received from Server2: "ok"
+Server3: role: :CANDIDATE
+Server3: VOTE RECEIVED from Server2
+Server3: server 3 became leader
+Server3: sending heartbeat to #PID<18274.146.0>
+Server3: sending heartbeat to #PID<18275.147.0>
+Server3: vote reply received from Server1: "ok"
+Server3: role: :LEADER
+Server3: Already leader so vote received from Server1 is discarded
+Server1: heartbeat received from the leader
+Server2: heartbeat received from the leader
+Server1: server role: FOLLOWER
+Server2: server role: FOLLOWER
+  time = 500 client requests seen = []
+  time = 500      db updates done = []
+
+  time = 1000 client requests seen = []
+  time = 1000      db updates done = []
+
+  time = 1500 client requests seen = []
+  time = 1500      db updates done = []
+
+  time = 2000 client requests seen = []
+  time = 2000      db updates done = []
+
+  time = 2500 client requests seen = []
+  time = 2500      db updates done = []
+
+  Node client1_56_hyunjoonjeon@127.0.0.1 exiting - maxtime reached
+  time = 3000 client requests seen = []
+  time = 3000      db updates done = []
+
+  Node server1_56_hyunjoonjeon@127.0.0.1 exiting - maxtime reached
+  Node server3_56_hyunjoonjeon@127.0.0.1 exiting - maxtime reached
+  Node server2_56_hyunjoonjeon@127.0.0.1 exiting - maxtime reached
+  time = 3500 client requests seen = []
+  time = 3500      db updates done = []
+
+  Node client3_56_hyunjoonjeon@127.0.0.1 exiting - maxtime reached
+  Node server4_56_hyunjoonjeon@127.0.0.1 exiting - maxtime reached
+  time = 4000 client requests seen = []
+  time = 4000      db updates done = []
+
+  Node client4_56_hyunjoonjeon@127.0.0.1 exiting - maxtime reached
+  Node client5_56_hyunjoonjeon@127.0.0.1 exiting - maxtime reached
+  time = 4500 client requests seen = []
+  time = 4500      db updates done = []
+
+  Node server5_56_hyunjoonjeon@127.0.0.1 exiting - maxtime reached
+  Node client2_56_hyunjoonjeon@127.0.0.1 exiting - maxtime reached
+  Node raft_56_hyunjoonjeon@127.0.0.1 exiting - maxtime reached
+  time = 5000 client requests seen = []
+  time = 5000      db updates done = []
+
+  time = 5500 client requests seen = []
+  time = 5500      db updates done = []
+

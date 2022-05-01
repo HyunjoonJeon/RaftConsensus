@@ -1,0 +1,2074 @@
+# Hyunjoon Jeon (hj1119)
+
+mix compile
+Compiling 1 file (.ex)
+-------------------------------------------------------------------
+  time = 500 client requests seen = []
+  time = 500      db updates done = []
+
+Server2: election started
+Server2: Reason: {0, 0}
+Server2: current_term: 1
+Server2: current_role: :CANDIDATE
+Server2: number of votes: 1
+Server2: sending vote request with msg: [#PID<0.147.0>, 2, 0, 0, 1] to #PID<18308.147.0>
+Server2: sending vote request with msg: [#PID<0.147.0>, 2, 0, 0, 1] to #PID<18309.147.0>
+Server3: vote request received from Server2
+Server1: vote request received from Server2
+Server1: Requested server has higher term value so increment
+Server3: Requested server has higher term value so increment
+Server1: this server's log last term: 0
+Server1: requested server's log last term: 0
+Server1: this server's log last index: 0
+Server1: requested server's log last index: 0
+Server1: voting for Server2
+Server2: vote reply received from Server1: "ok"
+Server2: role: :CANDIDATE
+Server2: VOTE RECEIVED from Server1
+Server2: server 2 became leader
+Server3: this server's log last term: 0
+Server3: requested server's log last term: 0
+Server3: this server's log last index: 0
+Server3: requested server's log last index: 0
+Server3: voting for Server2
+Server2: sending heartbeat to #PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server2: creating a client
+Server2: sending a command
+Server2: vote reply received from Server3: "ok"
+Server2: role: :LEADER
+Server2: Already leader so vote received from Server3 is discarded
+Server2: command received
+Server2: adding to leader's log: Term: 1, Index: 1, Request: "y<-3"
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: Leader sends APPEND_ENTRIES_REQUEST for followers to replicate leader's log
+Server2: sending new_entry = %{1 => %{index: 1, request: "y<-3", term: 1}}, old_entry = nil
+Server2: sending new_entry = %{1 => %{index: 1, request: "y<-3", term: 1}}, old_entry = nil
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server1: checking for log consistency
+Server3: checking for log consistency
+Server2: sending heartbeat to #PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: replicated log %{1 => %{index: 1, request: "y<-3", term: 1}}
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server1: replicated log %{1 => %{index: 1, request: "y<-3", term: 1}}
+Server2: log replicated: %{#PID<18309.147.0> => 1}
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server2: log replicated: %{#PID<18308.147.0> => 1, #PID<18309.147.0> => 1}
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+  time = 1000 client requests seen = []
+  time = 1000      db updates done = []
+
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+  time = 1500 client requests seen = []
+  time = 1500      db updates done = []
+
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+  time = 2000 client requests seen = []
+  time = 2000      db updates done = []
+
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+  Node server1_52_hyunjoonjeon@127.0.0.1 exiting - maxtime reached
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+  time = 2500 client requests seen = []
+  time = 2500      db updates done = []
+
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+  Node server2_52_hyunjoonjeon@127.0.0.1 exiting - maxtime reached
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+  time = 3000 client requests seen = []
+  time = 3000      db updates done = []
+
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server1: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18308.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+  Node server4_52_hyunjoonjeon@127.0.0.1 exiting - maxtime reached
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+  Node client3_52_hyunjoonjeon@127.0.0.1 exiting - maxtime reached
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+  Node client4_52_hyunjoonjeon@127.0.0.1 exiting - maxtime reached
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+  time = 3500 client requests seen = []
+  time = 3500      db updates done = []
+
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+Server2: sending heartbeat to #PID<18309.147.0>
+Server3: received APPEND_ENTRIES_REQUEST from leader: Server#PID<18279.147.0>
+  Node server5_52_hyunjoonjeon@127.0.0.1 exiting - maxtime reached
+Server3: election started
+Server3: Reason: {1, #PID<0.147.0>}
+Server3: current_term: 2
+Server3: current_role: :CANDIDATE
+Server3: number of votes: 1
+Server3: sending vote request with msg: [#PID<0.147.0>, 3, 1, 1, 2] to #PID<18278.147.0>
+Server3: sending vote request with msg: [#PID<0.147.0>, 3, 1, 1, 2] to #PID<18279.147.0>
+  Node server3_52_hyunjoonjeon@127.0.0.1 exiting - maxtime reached
+  time = 4000 client requests seen = []
+  time = 4000      db updates done = []
+
+Server3: election started
+Server3: Reason: {1, 0}
+Server3: current_term: 3
+Server3: current_role: :CANDIDATE
+Server3: number of votes: 1
+Server3: sending vote request with msg: [#PID<0.147.0>, 3, 1, 1, 3] to #PID<18278.147.0>
+Server3: sending vote request with msg: [#PID<0.147.0>, 3, 1, 1, 3] to #PID<18279.147.0>
+  Node client1_52_hyunjoonjeon@127.0.0.1 exiting - maxtime reached
+  Node client5_52_hyunjoonjeon@127.0.0.1 exiting - maxtime reached
+  time = 4500 client requests seen = []
+  time = 4500      db updates done = []
+
+  Node client2_52_hyunjoonjeon@127.0.0.1 exiting - maxtime reached
+Server3: election started
+Server3: Reason: {2, 0}
+Server3: current_term: 4
+Server3: current_role: :CANDIDATE
+Server3: number of votes: 1
+Server3: sending vote request with msg: [#PID<0.147.0>, 3, 1, 1, 4] to #PID<18278.147.0>
+Server3: sending vote request with msg: [#PID<0.147.0>, 3, 1, 1, 4] to #PID<18279.147.0>
+  Node raft_52_hyunjoonjeon@127.0.0.1 exiting - maxtime reached
+  time = 5000 client requests seen = []
+  time = 5000      db updates done = []
+
+  time = 5500 client requests seen = []
+  time = 5500      db updates done = []
+

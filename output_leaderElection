@@ -1,0 +1,81 @@
+mix compile
+Compiling 1 file (.ex)
+-------------------------------------------------------------------
+
+22:40:39.236 [warning] ** Can not start Client::start,[%{append_entries_timeout: 10, client_reply_timeout: 500, client_request_interval: 5, client_timelimit: 60000, crash_servers: %{3 => 10000, 4 => 15000}, debug_level: 0, debug_options: "none", election_timeout_range: 300..600, line_num: 0, max_amount: 1000, max_client_requests: 1, monitorP: #PID<0.144.0>, monitor_interval: 500, n_accounts: 100, n_clients: 0, n_servers: 3, node_location: "raft_30_hyunjoonjeon@127.0.0.1 (192.168.1.56)", node_name: "Raft", node_num: "", node_suffix: "30_hyunjoonjeon@127.0.0.1", node_type: "Raft", raft_timelimit: 5000, setup: :default, start_function: :cluster_start}, 0, [#PID<18201.147.0>, #PID<18308.147.0>, #PID<18309.147.0>]] on :"client0_30_hyunjoonjeon@127.0.0.1" **
+
+Server1: election started
+Server1: current_term: 1
+Server1: current_role: :CANDIDATE
+Server1: number of votes: 1
+Server1: sending vote request with msg: [#PID<0.147.0>, 1, 0, 0] to #PID<18303.147.0>
+Server1: sending vote request with msg: [#PID<0.147.0>, 1, 0, 0] to #PID<18304.147.0>
+Server2: vote request received from Server1
+Server3: vote request received from Server1
+Server2: this server's log last term: 0
+Server3: this server's log last term: 0
+Server2: requested server's log last term: 0
+Server3: requested server's log last term: 0
+Server2: this server's log last index: 0
+Server3: this server's log last index: 0
+Server2: requested server's log last index: 0
+Server3: requested server's log last index: 0
+Server2: voting for Server1
+Server3: voting for Server1
+Server1: vote reply received from Server2: "ok"
+Server1: role: :CANDIDATE
+Server1: VOTE RECEIVED from Server2
+Server1: server 1 became leader
+Server1: sending heartbeat to #PID<18303.147.0>
+Server1: sending heartbeat to #PID<18304.147.0>
+Server1: vote reply received from Server3: "ok"
+Server1: role: :LEADER
+Server1: Already leader so vote received from Server3 is discarded
+Server2: heartbeat received from the leader
+Server2: server role: FOLLOWER
+Server3: heartbeat received from the leader
+Server3: server role: FOLLOWER
+  time = 500 client requests seen = []
+  time = 500      db updates done = []
+
+  time = 1000 client requests seen = []
+  time = 1000      db updates done = []
+
+  time = 1500 client requests seen = []
+  time = 1500      db updates done = []
+
+  time = 2000 client requests seen = []
+  time = 2000      db updates done = []
+
+  time = 2500 client requests seen = []
+  time = 2500      db updates done = []
+
+  Node server3_30_hyunjoonjeon@127.0.0.1 exiting - maxtime reached
+  Node server1_30_hyunjoonjeon@127.0.0.1 exiting - maxtime reached
+  time = 3000 client requests seen = []
+  time = 3000      db updates done = []
+
+  Node server5_30_hyunjoonjeon@127.0.0.1 exiting - maxtime reached
+  Node server4_30_hyunjoonjeon@127.0.0.1 exiting - maxtime reached
+  time = 3500 client requests seen = []
+  time = 3500      db updates done = []
+
+  Node client5_30_hyunjoonjeon@127.0.0.1 exiting - maxtime reached
+  Node client2_30_hyunjoonjeon@127.0.0.1 exiting - maxtime reached
+  time = 4000 client requests seen = []
+  time = 4000      db updates done = []
+
+  Node client3_30_hyunjoonjeon@127.0.0.1 exiting - maxtime reached
+  Node client1_30_hyunjoonjeon@127.0.0.1 exiting - maxtime reached
+  time = 4500 client requests seen = []
+  time = 4500      db updates done = []
+
+  Node client4_30_hyunjoonjeon@127.0.0.1 exiting - maxtime reached
+  Node server2_30_hyunjoonjeon@127.0.0.1 exiting - maxtime reached
+  Node raft_30_hyunjoonjeon@127.0.0.1 exiting - maxtime reached
+  time = 5000 client requests seen = []
+  time = 5000      db updates done = []
+
+  time = 5500 client requests seen = []
+  time = 5500      db updates done = []
+
